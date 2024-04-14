@@ -11,13 +11,14 @@ class ChatOpenAI:
         if self.openai_api_key is None:
             raise ValueError("OPENAI_API_KEY is not set")
 
-    def run(self, messages, text_only: bool = True):
+    def run(self, messages, text_only: bool = True, **kwargs):
         if not isinstance(messages, list):
             raise ValueError("messages must be a list")
 
         openai.api_key = self.openai_api_key
         response = openai.Client().chat.completions.create(
-            model=self.model_name, messages=messages
+            model=self.model_name, messages=messages,
+            **kwargs,
         )
 
         if text_only:

@@ -10,6 +10,7 @@ class BasePrompt:
         """
         self.prompt = prompt
         self._pattern = re.compile(r"\{([^}]+)\}")
+        # self._pattern = re.compile(r'"([^"]+)"\s*:\s*"([^"]+)"')
 
     def format_prompt(self, **kwargs):
         """
@@ -20,6 +21,14 @@ class BasePrompt:
         """
         matches = self._pattern.findall(self.prompt)
         return self.prompt.format(**{match: kwargs.get(match, "") for match in matches})
+        # formatted = {match: kwargs.get(match, "") 
+        #              for match in matches 
+        #              if kwargs.get(match) is not None
+        #              }
+        # prompt = self.prompt.format(**formatted)
+        # return prompt
+
+
 
     def get_input_variables(self):
         """
@@ -41,14 +50,17 @@ class RolePrompt(BasePrompt):
         super().__init__(prompt)
         self.role = role
 
-    def create_message(self, **kwargs):
+    def create_message(self, format = True, **kwargs):
         """
         Creates a message dictionary with a role and a formatted message.
 
         :param kwargs: The values to substitute into the prompt string
         :return: Dictionary containing the role and the formatted message
         """
-        return {"role": self.role, "content": self.format_prompt(**kwargs)}
+        content = self.prompt
+        if format is True:
+            content = self.format_prompt(**kwargs)
+        return {"role": self.role, "content": content}
 
 
 class SystemRolePrompt(RolePrompt):
