@@ -1,5 +1,5 @@
 chainlit==1.0.502
-langchain-core==0.1.32
+langchain-core==0.1.42
 langchain-openai==0.0.8
 openai==1.16.2
 tiktoken
