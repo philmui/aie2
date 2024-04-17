@@ -1,0 +1,11 @@
+{
+    "question": 
+        "How can I check if the payroll is posted/imported to QuickBooks (QB) in the RUN system?, How can I export my payroll information to my Online QuickBooks file using ADP?",
+
+    "answer": "Online and Xero\u2122****  Depending on your settings, you can choose to send your GL data to your accounting software automatically after every payroll, or manually by clicking the green ****Post**** button.",
+
+    "contexts": [
+        "How do I create a GL file and send it to my accounting software?    How do I create a GL file and send it to my accounting software?  There are 2 ways to create a GL file. Click each option for details.  ![](arrowright.gif)As soon as you finish processing your payroll  ****For QuickBooks \u00ae Online and Xero\u2122****  Depending on your settings, you can choose to send your GL data to your accounting software automatically after every payroll, or manually by clicking the green ****Post**** button.  ****For all other accounting software****    1. Click the green ****Download File**** button.   2. Follow the prompts to save the file on your computer. The steps vary depending on the browser you're using.    3. Import the file into your accounting software.   ![](arrowright.gif)After you process a payroll, from the GL Transaction History page",  
+
+        "**Start here: Payroll > General ledger > General ledger transactions**  Check the Status column to see the status of the GL file for the payroll you want.    1. Click ****Actions**** ![Click to select](https://support.adp.com/adp_payroll/content/hybrid/imagesR31/select_icon.png)******** for payroll you want.   2.  ** **For QuickBooks \u00ae Online and Xero\u2122****, select ****Send data to your accounting software**** to send the GL data from your payroll directly to your QuickBooks Online or Xero account.   ** **For all other accounting software**** , select ****Download a new GL file****. Follow the instructions to save the file to your computer. The steps vary depending on the browser you're using. "
+}
