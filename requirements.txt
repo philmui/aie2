@@ -1,0 +1,15 @@
+chromadb
+python_dotenv==1.0.1
+langchain_community 
+langchain
+langchain-openai 
+langchain-mistralai
+langchainhub  
+langgraph 
+tavily-python 
+tiktoken 
+llama-index-embeddings-voyageai
+llama-index-llms-ollama
+langchain-voyageai
+unstructured[pdf]
+langchain_experimental
